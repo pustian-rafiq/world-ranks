@@ -1,0 +1,41 @@
+.container {
+  padding: 0px 24px 24px 24px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 32px;
+ background-color: rgb(10, 30, 48);
+ height: 30px;
+ padding: 10px;
+}
+.header a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+   
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+    background-color: rgb(10, 30, 48);
+    height: 30px;
+    padding: 10px;
+    color: #fff;
+}
+.footer a{
+    text-decoration: none;
+    color: rgb(182, 178, 178);
+    transition:  0.3s ease;
+}
+.footer a:hover{
+    color: rgb(109, 101, 101);
+    text-decoration: underline;
+}
