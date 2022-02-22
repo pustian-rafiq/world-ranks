@@ -60,6 +60,16 @@ const CountryTable = ({ countries }) => {
                     <SortArrow />
 
                 </button>
+                <button className={styles.heading_name} onClick={() => switchValueAndDirection("name")}>
+                    <div>Region</div>
+                    <SortArrow />
+
+                </button>
+                <button className={styles.heading_name} onClick={() => switchValueAndDirection("name")}>
+                    <div>Sub Region</div>
+                    <SortArrow />
+
+                </button>
                 <button className={styles.heading_population} onClick={() => switchValueAndDirection("population")}>
                     <div>Population</div>
                     <SortArrow direction={direction} />
@@ -70,6 +80,8 @@ const CountryTable = ({ countries }) => {
                     return (
                         <div className={styles.row} key={country.name.common}>
                             <div className={styles.name}>{country.name.common}</div>
+                            <div className={styles.name}>{country.region}</div>
+                            <div className={styles.name}>{country.subregion}</div>
                             <div className={styles.population}>{country.population}</div>
                         </div>
                     )
