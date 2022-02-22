@@ -1,7 +1,7 @@
 import { KeyboardArrowDownRounded, KeyboardArrowUpRounded } from '@mui/icons-material';
 import React, { useState } from 'react'
 import styles from './CountryTable.module.css'
-
+import Link from 'next/link'
 // Sort the countries table according to population
 const orderBy = (countries,value, direction) => {
     if (direction === 'asc') {
@@ -60,13 +60,18 @@ const CountryTable = ({ countries }) => {
                     <SortArrow />
 
                 </button>
-                <button className={styles.heading_name} onClick={() => switchValueAndDirection("name")}>
+                <button className={styles.heading_region} onClick={() => switchValueAndDirection("name")}>
                     <div>Region</div>
                     <SortArrow />
 
                 </button>
-                <button className={styles.heading_name} onClick={() => switchValueAndDirection("name")}>
+                <button className={styles.heading_subregion} onClick={() => switchValueAndDirection("name")}>
                     <div>Sub Region</div>
+                    <SortArrow />
+
+                </button>
+                <button className={styles.heading_flag} onClick={() => switchValueAndDirection("name")}>
+                    <div>Flag</div>
                     <SortArrow />
 
                 </button>
@@ -78,12 +83,16 @@ const CountryTable = ({ countries }) => {
             {
                 orderedCountries.map((country) => {
                     return (
-                        <div className={styles.row} key={country.name.common}>
+                        <Link href={`country/${country.ccn3}`} key={country.name.common}>
+                         <div className={styles.row} key={country.name.common}>
                             <div className={styles.name}>{country.name.common}</div>
-                            <div className={styles.name}>{country.region}</div>
-                            <div className={styles.name}>{country.subregion}</div>
+                            <div className={styles.region}>{country.region}</div>
+                            <div className={styles.subregion}>{country.subregion}</div>
+                            <div className={styles.flag}>{country.flag}</div>
                             <div className={styles.population}>{country.population}</div>
                         </div>
+                        </Link>
+                       
                     )
                 })
             }

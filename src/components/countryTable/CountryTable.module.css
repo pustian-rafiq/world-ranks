@@ -11,16 +11,30 @@
     cursor: pointer;
 }
 .heading_name,
-.heading_population {
+.heading_population,
+.heading_region,
+.heading_subregion,
+.heading_flag,
+.heading_population
+ {
     flex: 1;
-    padding: 28px;
+    padding: 20px 0px;
     /* color: var(--text-color-secondary); */
     font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.heading_name{
+
+.heading_population,
+.heading_region,
+.heading_flag,
+.heading_subregion{
+    justify-content: left;
+}
+.heading_name
+{
+   padding-left: 20px;  
     justify-content: left;
 }
 .heading_arrow{
@@ -31,17 +45,35 @@
 }
 .row{
     display: flex;
-    padding: 28px;
+    padding: 20px;
     text-align: center;
     border-color: var(--text-color-light);
     border-radius: 8px ;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     box-shadow: 2px 2px 6px rgba(17, 10, 10, 0.3);
 }
-.name{
+.name
+{
+    flex: 1;
+    text-align: left;
+}
+.region
+{
+    flex: 1;
+    text-align: left;
+}
+
+.subregion{
+    flex: 1;
+    text-align: left;
+}
+
+.flag
+{
     flex: 1;
     text-align: left;
 }
 .population{
     flex:1;
+    text-align: left;
 }
